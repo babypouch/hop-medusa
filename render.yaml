@@ -3,8 +3,8 @@ services:
   name: hop-medusa-prod
   env: node
   plan: starter
-  buildCommand: yarn install
-  startCommand: yarn start
+  buildCommand: yarn install && npm install @medusajs/medusa-cli -g
+  startCommand: yarn render-start
   healthCheckPath: /health
   autoDeploy: false
   envVars:
