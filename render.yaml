@@ -7,10 +7,6 @@ services:
   startCommand: yarn start
   healthCheckPath: /health
   autoDeploy: false
-  disk:
-    name: hop-db-medusa
-    mountPath: 
-    sizeGB: 1
   envVars:
     - key: NODE_VERSION
       value: ~18.15.0
@@ -33,6 +29,10 @@ services:
       generateValue: true
 - type: redis
   name: hop-lightning
+  disk:
+    name: redis-data
+    mountPath: /opt/redis
+    sizeGB: 1
   ipAllowList: # required
     - source: 0.0.0.0/0
       description: everywhere
