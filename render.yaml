@@ -29,10 +29,6 @@ services:
       generateValue: true
 - type: redis
   name: hop-lightning
-  disk:
-    name: redis-data
-    mountPath: /opt/redis
-    sizeGB: 1
   ipAllowList: # required
     - source: 0.0.0.0/0
       description: everywhere
