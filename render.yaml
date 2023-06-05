@@ -27,6 +27,8 @@ services:
       generateValue: true
     - key: COOKIE_SECRET
       generateValue: true
+    - key: MEDUSA_FF_PRODUCT_CATEGORIES
+      value: true
 - type: redis
   name: hop-lightning
   ipAllowList: # required
