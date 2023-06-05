@@ -37,12 +37,20 @@ const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
-    resolve: `@medusajs/file-local`,
+    resolve: `medusa-file-cloudinary`,
     options: {
-      upload_dir: "uploads",
+        cloud_name: process.env.CLOUDINARY_NAME,
+        api_key: process.env.CLOUDINARY_KEY,
+        api_secret: process.env.CLOUDINARY_SECRET,
+        secure: true,
     },
-
   },
+  // {
+  //   resolve: `@medusajs/file-local`,
+  //   options: {
+  //     upload_dir: "uploads",
+  //   },
+  // },
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
   {
     resolve: "@medusajs/admin",
