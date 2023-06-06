@@ -67,6 +67,7 @@ const plugins = [
               "variants",
               "variant_sku",
               "options",
+              "categories",
               "collection_title",
               "collection_handle",
               "images",
