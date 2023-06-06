@@ -75,7 +75,6 @@ const plugins = [
             ]
           },
         },
-        transformer,
         // index settings...
       },
     },
