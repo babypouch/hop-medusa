@@ -2,7 +2,7 @@ services:
 - type: web
   name: hop-medusa-prod
   env: node
-  plan: standard
+  plan: pro
   buildCommand: yarn install && npm install @medusajs/medusa-cli -g
   startCommand: yarn render-start
   healthCheckPath: /health
@@ -39,4 +39,4 @@ services:
 
 databases:
 - name: hop-medusa-db
-  plan: starter
+  plan: standard
