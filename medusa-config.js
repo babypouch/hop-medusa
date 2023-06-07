@@ -118,8 +118,8 @@ const plugins = [
               "metadata",
             ]
           },
+          transformer: productTransformer,
         },
-        transformer: productTransformer,
         // index settings...
       },
     },
