@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const {variantKeys} = require('@medusajs/types')
 
 let ENV_FILE_NAME = "";
 switch (process.env.NODE_ENV) {
@@ -33,7 +34,6 @@ const DATABASE_URL =
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
-import { variantKeys } from "@medusajs/types"
 const prefix = `variant`
 
 const productTransformer = (product) => {
